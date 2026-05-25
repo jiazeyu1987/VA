@@ -33,7 +33,7 @@
 
   "_comment_peak_detect": "SimpleFEM-style focus+ROI2/ROI3: detect green-line intersection (anchor) on BEFORE once; compute ROI2/ROI3 by extension_params; reuse same ROI2 on AFTER; compute roi2_diff=(after_mean-before_mean) and compare with difference_threshold (>= green else red). If focus fails, reuse last successful anchor/ROI rects.",
   "peak_detect": {
-    "enabled": true,
+    "enabled": false,
     "difference_threshold": 0.5,
     "roi2_extension_params": { "left": 40, "right": 40, "top": 50, "bottom": 30 },
     "roi3_extension_params": { "left": 30, "right": 30, "top": 50, "bottom": 100 },
@@ -41,7 +41,7 @@
     "roi3_g1_g2_override": { "enabled": true, "g1_threshold": 98.0, "g2_threshold": 20.0, "use_peak_max": true },
     "roi3_column_diff_override": { "enabled": true, "g1_threshold": 99.0, "threshold": 15.0, "use_peak_max": true }
   },
-  "peak_debug_log": { "enabled": true }
+  "peak_debug_log": { "enabled": false }
   ,
   "_comment_offline_tmp_frames": "When enabled, buffer frames from first OFFLINE signal and flush (save images + append JSONL) only when the second OFFLINE signal arrives. Per-frame JSONL contains: filename, roi1_mean, roi2_mean, roi3_mean. Additional event lines are appended with a different schema: {event:'before_saved'/'after_saved', filename,...}.",
   "offline_tmp_frames": { "enabled": true, "dir": "D:/software_data/tmp", "max_buffer_frames": 2500 }
