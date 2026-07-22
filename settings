@@ -3,7 +3,7 @@
   "width_x": 2,
   "height_y": 4,
   "binary_threshold": 10,
-  "drawcontour": true,
+  "drawcontour": true, 
   "if_align": false,
 
   "_comment_diff_label": "Text overlay style for differ/diff images (e.g. FEM result label).",
